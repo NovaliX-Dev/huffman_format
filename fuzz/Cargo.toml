@@ -1,0 +1,28 @@
+[package]
+name = "bitpack-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.huffman_format]
+path = ".."
+
+[[bin]]
+name = "check_data_integrity"
+path = "fuzz_targets/check_data_integrity.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_huffman_unpack_file"
+path = "fuzz_targets/fuzz_huffman_unpack_file.rs"
+test = false
+doc = false
+bench = false

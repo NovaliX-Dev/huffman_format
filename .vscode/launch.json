@@ -1,0 +1,218 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'benchmarks'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=benchmarks"
+                ],
+                "filter": {
+                    "name": "benchmarks",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug benchmark 'compression_ratio'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bench=compression_ratio",
+                    "--package=benchmarks"
+                ],
+                "filter": {
+                    "name": "compression_ratio",
+                    "kind": "bench"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug benchmark 'performance'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bench=performance",
+                    "--package=benchmarks"
+                ],
+                "filter": {
+                    "name": "performance",
+                    "kind": "bench"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'huffman_format'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=huffman_format"
+                ],
+                "filter": {
+                    "name": "huffman_format",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'bitpack'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=bitpack"
+                ],
+                "filter": {
+                    "name": "bitpack",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'cli'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=cli",
+                    "--package=cli"
+                ],
+                "filter": {
+                    "name": "cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "unpack",
+                "-",
+                "-o", "-"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'cli'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=cli",
+                    "--package=cli"
+                ],
+                "filter": {
+                    "name": "cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'check_data_integrity'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=check_data_integrity",
+                    "--package=bitpack-fuzz"
+                ],
+                "filter": {
+                    "name": "check_data_integrity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'check_data_integrity'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=check_data_integrity",
+                    "--package=bitpack-fuzz"
+                ],
+                "filter": {
+                    "name": "check_data_integrity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'fuzz_huffman_unpack_file'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=fuzz_huffman_unpack_file",
+                    "--package=bitpack-fuzz"
+                ],
+                "filter": {
+                    "name": "fuzz_huffman_unpack_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'fuzz_huffman_unpack_file'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=fuzz_huffman_unpack_file",
+                    "--package=bitpack-fuzz"
+                ],
+                "filter": {
+                    "name": "fuzz_huffman_unpack_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

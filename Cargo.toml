@@ -1,0 +1,20 @@
+[package]
+name = "huffman_format"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [ 
+    "benchmarks", 
+    "bitpack", 
+    "cli", 
+    "fuzz"
+]
+resolver = "2"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(coverage_nightly)'] }
+
+[dependencies]
+bitpack = { version = "0.1.0", path = "bitpack", features = ["test_framework"] }
+log = "0.4.25"
