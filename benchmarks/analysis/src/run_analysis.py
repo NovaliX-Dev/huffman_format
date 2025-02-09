@@ -95,7 +95,7 @@ def main():
     plot = sns.catplot(other_benchmarks_df, x='value', y='sample_measured_value', hue='function', kind='bar', errorbar=None, aspect=2)
     plt.yscale('log')
     plt.ylabel('Compression ratio [input size / output size]')
-    plt.xlabel('Amount of entropy')
+    plt.xlabel('Amount of entropy in the input source')
 
     plot.savefig(result_dir / "compression_ratio.svg")
 
