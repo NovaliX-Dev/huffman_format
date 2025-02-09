@@ -110,7 +110,7 @@ checksum = "8f68f53c83ab957f72c32642f3868eec03eb974d1fb82e453128456482613d36"
 
 [[package]]
 name = "bitpack"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "cfg-if",
 ]
@@ -227,7 +227,7 @@ checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
 
 [[package]]
 name = "cli"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -478,7 +478,7 @@ checksum = "fbf6a919d6cf397374f7dfeeea91d974c7c0a7221d0d0f4f20d859d329e53fcc"
 
 [[package]]
 name = "huffman_format"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "bitpack",
  "log",
