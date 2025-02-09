@@ -11,12 +11,12 @@ Here is the other important things I've learned while making this project :
 
 ## Project structure
 
-- The crate at the root of the project contains the huffman format library
+- The crate at the root of the project contains the huffman format library. It exposes two functions, `pack_file` and `unpack_file` which takes one reader and one writer. Not that for `pack_file`, the reader must be seekable too.
 - `bitpack` contains all the code related to bit reading and writing
 - `benchmarks` contains all the benchmarking related code. It's in a separate crate because the performance of that library is compared to some used other library as well
 - `benchmarks/analysis` contains the python code responsible from loading the criterion generated csv files and generating the charts from them
 - `fuzz` contains the all the fuzz targets.
-- `cli` contains a command line program which use that library
+- `cli` contains a command line program which use that library. It supports piping the output in all situations, and piping on the input in some situations, see the category below for more details.
 
 ## Important 
 
