@@ -16,7 +16,7 @@ Here is the other important things I've learned while making this project :
 - `benchmarks` contains all the benchmarking related code. It's in a separate crate because the performance of that library is compared to some used other library as well
 - `benchmarks/analysis` contains the python code responsible from loading the criterion generated csv files and generating the charts from them
 - `fuzz` contains the all the fuzz targets.
-- `cli` contains a command line program which use that library. It supports piping the output in all situations, and piping on the input in some situations, see the category below for more details.
+- `cli` contains a command line program which use that library. It supports piping the output in all situations, and piping on the input in some situations, see the category below for more details. It can read and write to files too, with an option of overwriting.
 
 ## Important 
 
