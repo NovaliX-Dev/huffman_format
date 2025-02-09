@@ -27,7 +27,7 @@ Like i sead, that's more an experimentation that a library meant to be used in p
 - There are no documentation on the public function of that library
 
 On top of that, this format has several limitations :
-- This format can't be streamed when compressing data, as it requires one pass to count the amount of each bytes in a source and then another pass to compress that source
+- The input source can't be streamed when compressing data, as it requires one pass to count the amount of each bytes in a source and then another pass to compress that source
 - The compression of folders are not supported, only individual files
 - No encryption, no integrity checks, only the bare minimum infos
 
